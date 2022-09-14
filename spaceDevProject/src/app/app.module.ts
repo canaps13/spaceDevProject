@@ -10,14 +10,20 @@ import { LaunchDetailsPageComponent } from './launch-details-page/launch-details
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TooManyRequestsComponent } from './too-many-requests/too-many-requests.component';
-
+import { CustomRouteReuseStrategy} from './cache-route-reuse.strategy';
 
 const routes: Routes = [{
   path: 'home',
-  component: HomeComponent
+  component: HomeComponent,
+  data: {
+    shouldReuse: true
+  }
 },{
   path: '',
-  component: HomeComponent
+  component: HomeComponent,
+  data: {
+    shouldReuse: true
+  }
 },
 {
   path: '404',
@@ -49,7 +55,10 @@ const routes: Routes = [{
     MatListModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [{
+    provide: CustomRouteReuseStrategy,
+    useClass: CustomRouteReuseStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
