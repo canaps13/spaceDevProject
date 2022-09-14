@@ -1,0 +1,26 @@
+<div class="flexHorizontalAlign">
+    <h1>Next Launches</h1>
+  </div>
+  
+  
+  <div class="launchContainer">
+    <mat-list class="launchItem">
+      <div class="flexHorizontalAlign">
+        <mat-list-item class="listItem" style="font-weight: bold">Launch name</mat-list-item>
+        <mat-list-item class="listItem" style="font-weight: bold">Launch status</mat-list-item>
+        <mat-list-item class="listItem" style="font-weight: bold">Launch status description</mat-list-item>
+        <mat-list-item class="listItem" style="font-weight: bold">Launch time window</mat-list-item>
+      </div>
+      <mat-divider></mat-divider>
+    </mat-list>
+  
+      <mat-list *ngFor="let element of result" class="launchItem" (click)="launchDetails(element.id)">
+        <div class="flexHorizontalAlign">
+          <mat-list-item class="listItem">{{element.name}}</mat-list-item>
+          <mat-list-item class="listItem">{{element.status.name}}</mat-list-item>
+          <mat-list-item class="listItem">{{element.status.description}}</mat-list-item>
+          <mat-list-item class="listItem">{{element.window_start | date: 'short'}} - {{element.window_end | date: 'short'}}</mat-list-item>
+        </div>
+        <mat-divider></mat-divider>
+      </mat-list>
+  </div>

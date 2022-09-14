@@ -1,0 +1,46 @@
+<div class="flexVerticalAlign">
+    <h1>Launch informations</h1>
+</div>
+
+
+<div class="flexVerticalAlign">
+    <mat-list-item class="listItem" style="font-weight: bold">Launch Service Agency:</mat-list-item>
+    <mat-list-item class="listItem" >{{launchInfos.launch_service_provider.abbrev}}</mat-list-item>
+    <mat-list-item class="listItem" >{{launchInfos.launch_service_provider.administrator}}</mat-list-item>
+    <mat-list-item class="listItem" >{{launchInfos.launch_service_provider.description}}</mat-list-item>
+    <mat-divider></mat-divider>
+</div>
+
+<!-- <div class="flexVerticalAlign">
+    <mat-list-item class="listItem" style="font-weight: bold">Agency Informations:</mat-list-item>
+    <mat-list-item class="listItem" >country code : {{location.country_code}}</mat-list-item>
+    <mat-list-item class="listItem" >name : {{location.name}}</mat-list-item>
+    <img src={{location.map_image}} />
+    <mat-divider></mat-divider>
+</div> -->
+
+<div class="flexVerticalAlign">
+    <mat-list-item class="listItem" style="font-weight: bold">Rocket Configuration Informations:</mat-list-item>
+    <mat-list-item class="listItem" >full name : {{launchInfos.rocket.configuration.full_name}}</mat-list-item>
+    <mat-list-item class="listItem" >family : {{launchInfos.rocket.configuration.family}}</mat-list-item>
+    <mat-list-item class="listItem" >description: {{launchInfos.rocket.configuration.description}}</mat-list-item>
+    <mat-list-item class="listItem" >diameter : {{launchInfos.rocket.configuration.diameter}} </mat-list-item>
+    <mat-list-item class="listItem" >length : {{launchInfos.rocket.configuration.length}} </mat-list-item>
+    <mat-list-item class="listItem" >launch mass : {{launchInfos.rocket.configuration.launch_mass}} m</mat-list-item>
+    <mat-list-item class="listItem" >consecutive successful launches : {{launchInfos.rocket.consecutive_successful_launches.full_name}} </mat-list-item>
+    <mat-list-item class="listItem" >pending_launches : {{launchInfos.rocket.configuration.pending_launches}} m</mat-list-item>
+
+    
+    <img src={{location.map_image}} />
+    <mat-divider></mat-divider>
+</div> 
+
+
+<div class="flexVerticalAlign">
+    <mat-list-item class="listItem" style="font-weight: bold">Location Informations:</mat-list-item>
+    <mat-list-item class="listItem" >country code : {{location.country_code}}</mat-list-item>
+    <mat-list-item class="listItem" >name : {{location.name}}</mat-list-item>
+    <img src={{location.map_image}} />
+    <mat-divider></mat-divider>
+</div>
+
